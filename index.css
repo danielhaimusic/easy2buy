@@ -1,0 +1,221 @@
+body,
+html {
+  font-family: 'Poppins', sans-serif;
+  background: #424242;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* top line  */
+.top-line {
+  background-color: #606060;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* side bar container on the left side of logo-container in top line*/
+.sidebar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* new-conversation-container */
+.new-conversation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* logo text */
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+/* menu icon */
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* main container */
+
+
+/* side bar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  background-color: #606060;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+
+
+.download-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #2f2f2f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#download-status {
+  border: solid 1px #2f2f2f;
+  background-color: #2f2f2f;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.chat-container {
+  height: 500px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #2f2f2f;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.chat-box {
+  overflow-y: auto;
+  background-color: #2f2f2f;
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+  flex: 1 1;
+}
+
+.chat-stats {
+  background-color: #2f2f2f;
+  flex: 0 0;
+  padding: 10px;
+  font-size: 0.85rem;
+  color: #666;
+  border-top: 1px solid #ccc;
+}
+
+.message-container {
+  width: 100%;
+  display: flex;
+}
+
+.message {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 0.95rem;
+}
+
+.message-container.user {
+  justify-content: end;
+}
+
+.message-container.assistant {
+  justify-content: start;
+}
+
+.message-container.user .message {
+  background: #007bff;
+  color: #fff;
+}
+
+.message-container.assistant .message {
+  background: #e9ecef;
+  color: #333;
+}
+
+.chat-input-container {
+  min-height: 50px;
+  flex: 0 0;
+  display: flex;
+  padding: 10px;
+  background-color: #2f2f2f;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+}
+
+#user-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #2f2f2f;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1668dc;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Modal background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #1E1E1E; /* Match your theme */
+  margin: 15% auto; /* Center vertically and horizontally */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, adjust as needed */
+  border-radius: 10px;
+  color: white; /* Text color */
+}
